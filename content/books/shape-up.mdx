@@ -1,0 +1,97 @@
+---
+title: "Shape Up"
+author: "Ryan Singer"
+year: 2019
+thesis: "Fixed time, variable scope. Bet on well-shaped problems, not estimated tasks — and give teams the space to figure out the solution."
+accent: "#4A6741"
+---
+
+<SectionLabel>Why it matters now</SectionLabel>
+
+AI-assisted development has made the act of building radically cheaper, which means the quality of what you decide to build matters more than ever before. When a team can ship a rough version of a feature in days instead of weeks, the bottleneck becomes the clarity of the problem being solved — and Shape Up is specifically about that clarity. Singer's framework describes a pre-building discipline that AI cannot replace: the judgment to know which problem is worth the appetite, which risks will kill a project midway, and where to draw the boundary around a piece of work before any code is written.
+
+---
+
+<SectionLabel>Core frameworks</SectionLabel>
+
+## Shaping vs. Building
+
+Shaping is the work that happens before a team touches anything. It is not writing specs, not creating detailed wireframes, not producing a requirements document — it is defining the problem, setting an appetite, sketching rough solution boundaries, and most importantly identifying the rabbit holes that could swallow a project whole. Shaped work has a specific character: it is concrete enough that a team knows what they're aiming for, but abstract enough that they retain the creative latitude to figure out the actual solution. Singer is adamant that shaping is a separate activity from building, done by different people on a different rhythm. Conflating the two produces one of two failure modes: over-specified work that robs teams of agency, or under-specified work that sends teams in circles. The shaper's job is not to design the solution — it is to remove the ambiguity that would prevent a team from designing a good one.
+
+<FrameworkCallout>
+**Key principle:** Shaped work has boundaries, not specs — it removes enough uncertainty to make a bet, without prescribing the solution that will live inside those boundaries.
+</FrameworkCallout>
+
+## Appetite, Not Estimates
+
+The standard software estimation process asks: how long will this take? Shape Up inverts the question entirely: how much time is this worth? Appetite is the amount of time a team is willing to spend on a problem given its strategic value — and it comes before any solution thinking, not after. This reframing matters because it changes who is in control of scope. When you estimate, scope is fixed and time expands to fill it. When you set appetite, time is fixed and scope becomes the variable you manage. A small batch is worth two weeks; a big batch is worth six. If the problem cannot be solved satisfactorily within that window, the answer isn't to extend the deadline — it's to re-shape the problem. This is a profound shift in accountability: teams are no longer responsible for hitting estimates they were pressured into, they are responsible for delivering something meaningful within a container they agreed to.
+
+<FrameworkCallout>
+**Key principle:** Appetite is how much time a problem is worth — set it before solution-thinking begins, and let it constrain scope rather than expanding the calendar.
+</FrameworkCallout>
+
+## The Pitch
+
+The pitch is the artifact that carries shaped work from the shapers to the betting table. It is a short document — typically one to two pages — with five components: the problem (what situation are users actually in?), the appetite (small batch or big batch), the solution (a rough sketch, not a spec — breadboards or fat-marker sketches), the rabbit holes (specific risks that need to be called out explicitly), and the no-gos (things that are deliberately out of scope to prevent scope creep during the cycle). The pitch is purposefully brief because a pitch that requires extensive explanation is itself a sign that the work isn't well-shaped. It should be possible to read a pitch, understand the bet being made, and evaluate whether to place it — without a meeting to decode it. Writing the pitch is also a forcing function: the discipline of putting it on paper surfaces ambiguities that feel resolved in conversation but aren't.
+
+<FrameworkCallout>
+**Key principle:** A pitch should communicate problem, appetite, rough solution, known risks, and explicit no-gos — and it should be readable without a walkthrough meeting to explain it.
+</FrameworkCallout>
+
+## Bets, Not Backlogs
+
+A backlog is a queue of intentions that accumulates guilt. Every item added to a backlog represents a bet not yet placed, a problem not yet evaluated, a commitment made to no one that hangs over the team. Singer argues that backlogs grow until they collapse under their own weight, and that most backlog items are never acted on anyway — they just generate low-grade anxiety. The alternative is the betting table: a deliberate, time-boxed decision meeting held between cycles where a small group reviews pitches and decides what to bet the next cycle on. Nothing is carried over automatically. If a pitch doesn't get selected this cycle, it can be re-pitched next time — but it must earn its place again rather than persisting by inertia. This structure forces recency and relevance: ideas must be good enough to pitch, not just old enough to survive.
+
+<FrameworkCallout>
+**Key principle:** Backlogs accumulate obligation; bets require deliberate choice. Nothing gets into a cycle by surviving long enough — it gets in by being worth betting on right now.
+</FrameworkCallout>
+
+## Hill Charts
+
+Hill charts are Singer's solution to the fundamental dishonesty of status updates. A task list shows completion, not confidence — a task that is 90% done on paper might represent 90% of the unknowns still unresolved. The hill metaphor captures the shape of real knowledge acquisition: the uphill side is problem-solving and figuring out the approach (high uncertainty, high cognitive load), while the downhill side is execution (known path, decreasing unknowns). Teams self-report their position on the hill for each piece of their project. What makes this useful is that the shape of movement reveals the nature of the risk: a team that has been stuck on the uphill side for weeks has an unknowns problem, not a time problem. Managers can see this pattern without interrogating the team — and teams can surface it without admitting failure.
+
+<FrameworkCallout>
+**Key principle:** The uphill side of the hill is unknowns; the downhill side is execution. Progress on a hill chart reveals whether a team has a discovery problem or a delivery problem.
+</FrameworkCallout>
+
+---
+
+<SectionLabel>Mental models</SectionLabel>
+
+## Imagined tasks are not real tasks
+
+At the start of any project, the task list is a fiction. The tasks that appear in the first planning session are derived from the shaper's mental model of the problem, not from reality — and reality will contradict that model the moment the team starts building. Discovery happens during building, not before it. This means task lists are not plans so much as hypotheses: useful for getting started, but requiring constant revision as real constraints emerge. Teams that treat their initial task breakdown as sacred will spend cycle time defending the wrong map rather than navigating the actual terrain.
+
+## A project that can't be cut isn't shaped
+
+One of the most useful tests Singer offers: if you can't articulate what you would cut if you ran out of time, the project is not well-shaped. Well-shaped work has a core that must ship and a periphery that can be dropped without destroying the value. If everything feels essential, it means the appetite hasn't been set honestly, or the problem hasn't been disaggregated into must-have and nice-to-have. The ability to cut is not a failure mode — it is the mechanism that makes fixed-time delivery possible.
+
+## Scope grows from discovery, not ambition
+
+The reason software projects expand is not that teams are undisciplined — it is that building reveals problems that weren't visible during planning. This is normal and unavoidable. The shape of a good project accounts for this by building in slack: the appetite is set knowing that discovery will add work, and the scope is left somewhat variable so that teams can absorb what they learn without blowing the deadline. Teams that are given variable scope are not being asked to do less — they are being given the authority to make good tradeoffs.
+
+---
+
+<SectionLabel>Key quotes</SectionLabel>
+
+<PullQuote>
+"The appetite defines the solution, not the other way around."
+</PullQuote>
+
+<PullQuote>
+"Backlogs are a big weight we don't need to carry. Giving up on the idea of keeping a backlog at all is the first step."
+</PullQuote>
+
+<PullQuote>
+"When we shape the work, we need to do it at the right level of abstraction: not too vague and not too concrete."
+</PullQuote>
+
+<PullQuote>
+"The key question isn't 'is it done?' but 'did we solve the problem?' Those are very different standards."
+</PullQuote>
+
+---
+
+<SectionLabel>The one thing</SectionLabel>
+
+The budget defines the solution, not the other way around.
