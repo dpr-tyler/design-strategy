@@ -5,17 +5,19 @@ import Nav from "@/components/Nav";
 export const metadata = {
   title: "Product Strategy Reference",
   description:
-    "Key frameworks and mental models from 10 essential product strategy books — distilled for quick reference.",
+    "Key frameworks and mental models from 20 essential product strategy and behavioral economics books — distilled for quick reference.",
   openGraph: {
     title: "Product Strategy Reference",
     description:
-      "Key frameworks and mental models from 10 essential product strategy books.",
+      "Key frameworks and mental models from 20 essential product strategy and behavioral economics books.",
     type: "website",
   },
 };
 
 export default function Home() {
   const books = getAllBooks();
+  const collection1 = books.filter((b) => b.collection === 1);
+  const collection2 = books.filter((b) => b.collection === 2);
 
   return (
     <>
@@ -32,17 +34,28 @@ export default function Home() {
             The Reference Library
           </h1>
           <p className="text-base leading-8 text-muted max-w-[52ch]">
-            Ten books. The frameworks and mental models that matter most for
+            Twenty books across two collections. The frameworks and mental models that matter most for
             building products in the AI era — distilled for quick reference.
           </p>
         </header>
 
-        <section>
+        <section className="mb-16">
           <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-muted border-b border-border pb-3">
-            {books.length} Books
+            Collection 1 — Product Strategy · {collection1.length} Books
           </p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {books.map((book) => (
+            {collection1.map((book) => (
+              <BookCard key={book.slug} book={book} />
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-muted border-b border-border pb-3">
+            Collection 2 — Behavioral Economics & Strategy · {collection2.length} Books
+          </p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {collection2.map((book) => (
               <BookCard key={book.slug} book={book} />
             ))}
           </div>

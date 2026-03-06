@@ -5,6 +5,7 @@ export interface BookMeta {
   year: number;
   thesis: string;
   accent?: string;
+  collection?: number;
 }
 
 export interface Framework {

@@ -21,6 +21,7 @@ export function getAllBooks(): BookMeta[] {
       year: data.year as number,
       thesis: data.thesis as string,
       accent: data.accent as string | undefined,
+      collection: data.collection as number | undefined,
     };
   });
 
@@ -43,6 +44,7 @@ export function getBookBySlug(slug: string): {
     year: data.year as number,
     thesis: data.thesis as string,
     accent: data.accent as string | undefined,
+    collection: data.collection as number | undefined,
   };
 
   return { meta, content };

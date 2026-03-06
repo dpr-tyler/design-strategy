@@ -1,0 +1,76 @@
+---
+title: "Misbehaving"
+author: "Richard Thaler"
+year: 2015
+thesis: "The rational-actor model of economics is fiction. Real humans — Humans, not Econs — systematically deviate from rationality in ways that matter for markets, policy, and product design."
+accent: "#6B4E8B"
+collection: 2
+---
+
+<SectionLabel>Why it matters now</SectionLabel>
+
+Thaler's memoir of behavioral economics is the inside account of how a field that started as heresy became orthodoxy. The battle he describes — between theorists who built elegant models of rational behavior and empiricists who kept finding messy evidence of irrationality — is now playing out in AI product development. Rational-agent AI systems built on expected utility maximization encounter the same misbehaving Humans who frustrated Thaler's economist colleagues. Understanding where the rational model fails — and why the failures are systematic — is as important for designing AI features as it is for designing pricing pages.
+
+<SectionLabel>Core frameworks</SectionLabel>
+
+## Mental Accounting
+
+People do not treat money as fungible. They categorize it into mental accounts — a "vacation fund," a "household account," a "investment account" — and apply different spending rules to each. A $1,000 casino winnings feels different from $1,000 salary, and is spent differently. This violates the economic assumption that money is money. Mental accounting explains why people will drive across town to save $10 on a $20 item but not to save $10 on a $1,000 item — the percentage framing activates different mental accounts. It explains why gift cards drive incremental spending (they activate a discretionary account) and why subscription billing reduces per-transaction pain (it moves spending to an overhead account).
+
+<FrameworkCallout>
+**Key principle:** Money is not fungible in the human mind. The account it comes from and the account it goes to shape how freely it is spent.
+</FrameworkCallout>
+
+## The Endowment Effect
+
+People value things more once they own them than they valued them before ownership. In Thaler's classic experiments, people who were given a coffee mug demanded more to sell it than they were willing to pay to buy an identical mug. Ownership creates a psychological premium that economists cannot easily explain — but that product designers can exploit for good. Free trials work partly because the endowment effect kicks in during the trial period. Cancellation friction is partly a product of the endowment effect making loss feel worse than equivalent non-acquisition. Platform lock-in is easier to maintain than it is to break in part because users value their data and history as owned assets.
+
+<FrameworkCallout>
+**Key principle:** Once users have something, they will work harder to keep it than they worked to get it. Design onboarding to create ownership — and design retention around the endowment, not just the value proposition.
+</FrameworkCallout>
+
+## The SIF (Supposedly Irrelevant Factors)
+
+Thaler's term for factors that should not matter according to economic theory but empirically do. Sunk costs should be irrelevant to future decisions (the ticket is paid for whether you go to the concert or not) but they drive behavior. The amount of discretionary time before a deadline should not change the underlying quality of work but it does. Irrelevant anchors should not affect willingness to pay but they do. The practical implication is that context — which economic models strip away — determines decisions. Product design is entirely in the business of context.
+
+<FrameworkCallout>
+**Key principle:** Factors that should not matter often matter more than factors that should. The model that ignores context is not rigorous — it is blind to most of human behavior.
+</FrameworkCallout>
+
+## Nudge Architecture in Practice
+
+Thaler details the evidence behind behavioral policy interventions: automatic enrollment in retirement plans increased participation from 49% to 86% at one employer without coercion. Electricity usage declined when households received reports showing their consumption relative to similar neighbors. Tax compliance increased when letters stated "most people in your area pay their taxes on time." These are not persuasion campaigns — they are changes to context, defaults, and feedback that work with the grain of human psychology rather than against it.
+
+<FrameworkCallout>
+**Key principle:** The most effective behavioral interventions are not incentives or commands — they are defaults and social norms delivered at the moment of decision.
+</FrameworkCallout>
+
+<SectionLabel>Mental models</SectionLabel>
+
+**The difference between descriptive and normative models.** Normative models say what rational agents should do. Descriptive models explain what humans actually do. Most economic and product thinking conflates them — assuming that what users should do (given their stated preferences) is what they will do. The gap between these two is where product failures live: features built for an idealized user who does not exist.
+
+**Fairness as a market force.** Thaler's research showed that firms that raise prices during demand spikes (hardware stores after storms charging more for generators) are perceived as unfair and suffer lasting reputational damage. Fairness is not a soft concern — it is a constraint on pricing power. Surge pricing models that violate intuitions of fairness generate backlash regardless of economic efficiency arguments.
+
+**Loss aversion and the status quo.** The most underrated source of product inertia is not laziness but loss aversion. Switching from a known product to an unknown one requires sacrificing certainty for potential gain — and losses feel twice as bad as equivalent gains feel good. The status quo has a psychological premium that cannot be overcome by feature parity alone.
+
+<SectionLabel>Key quotes</SectionLabel>
+
+<PullQuote>
+"If you want to help people accomplish their goals, make it easy. Remove barriers. The most powerful and underused tool in policy is the default."
+</PullQuote>
+
+<PullQuote>
+"The combination of loss aversion and narrow framing is a costly curse."
+</PullQuote>
+
+<PullQuote>
+"Supposedly irrelevant factors are actually quite relevant."
+</PullQuote>
+
+<PullQuote>
+"The Econ is a fictional character. We need to build models and policies for Humans."
+</PullQuote>
+
+<SectionLabel>The one thing</SectionLabel>
+
+The rational user is a convenient fiction. Build for the Human: present-biased, context-dependent, loss-averse, and responsive to defaults you set.
