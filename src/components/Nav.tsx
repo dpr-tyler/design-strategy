@@ -21,14 +21,14 @@ export default function Nav({ collections }: NavProps) {
           Strategy Reference
         </Link>
         {collections && collections.length > 0 && (
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-6 overflow-x-auto flex-1 min-w-0 justify-end flex-nowrap">
             {collections.map((col) => (
               <Link
                 key={col.id}
                 href={`/#collection-${col.id}`}
-                className="text-xs text-muted hover:text-foreground transition-colors duration-150"
+                className="text-xs text-muted hover:text-foreground transition-colors duration-150 shrink-0"
               >
-                Collection {col.id} — {col.name}
+                Collection {col.id}
               </Link>
             ))}
           </div>

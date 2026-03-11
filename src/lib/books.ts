@@ -40,7 +40,9 @@ export const COLLECTION_NAMES: Record<number, string> = {
 
 export function getCollections(books: BookMeta[]) {
   const ids = [...new Set(books.map((b) => b.collection).filter(Boolean))] as number[];
-  return ids.map((id) => ({ id, name: COLLECTION_NAMES[id] ?? `Collection ${id}` }));
+  return ids
+    .sort((a, b) => a - b)
+    .map((id) => ({ id, name: COLLECTION_NAMES[id] ?? `Collection ${id}` }));
 }
 
 export function getBookBySlug(slug: string): {
