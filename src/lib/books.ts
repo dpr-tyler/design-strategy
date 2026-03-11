@@ -29,6 +29,17 @@ export function getAllBooks(): BookMeta[] {
   return books.sort((a, b) => a.year - b.year);
 }
 
+export const COLLECTION_NAMES: Record<number, string> = {
+  1: "Product Strategy",
+  2: "Behavioral Economics & Strategy",
+  3: "Psychology & Human Behavior",
+};
+
+export function getCollections(books: BookMeta[]) {
+  const ids = [...new Set(books.map((b) => b.collection).filter(Boolean))] as number[];
+  return ids.map((id) => ({ id, name: COLLECTION_NAMES[id] ?? `Collection ${id}` }));
+}
+
 export function getBookBySlug(slug: string): {
   meta: BookMeta;
   content: string;

@@ -3,7 +3,9 @@
     "allow": [
       "Bash(git:*)",
       "Bash(gh auth:*)",
-      "Bash(vercel:*)"
+      "Bash(vercel:*)",
+      "Bash(for file:*)",
+      "Read(//Users/tyler/design-strategy/**)"
     ]
   }
 }

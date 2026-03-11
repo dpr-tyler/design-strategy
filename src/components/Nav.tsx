@@ -1,12 +1,15 @@
 import Link from "next/link";
-import { BookMeta } from "@/lib/types";
 
-interface NavProps {
-  books?: BookMeta[];
-  currentSlug?: string;
+interface Collection {
+  id: number;
+  name: string;
 }
 
-export default function Nav({ books, currentSlug }: NavProps) {
+interface NavProps {
+  collections?: Collection[];
+}
+
+export default function Nav({ collections }: NavProps) {
   return (
     <nav className="border-b border-border bg-background">
       <div className="mx-auto flex max-w-[68ch] items-center justify-between px-6 py-4">
@@ -17,29 +20,19 @@ export default function Nav({ books, currentSlug }: NavProps) {
         >
           Strategy Reference
         </Link>
-        {books && books.length > 0 && (
+        {collections && collections.length > 0 && (
           <div className="hidden md:flex items-center gap-6">
-            {books.slice(0, 5).map((book) => (
+            {collections.map((col) => (
               <Link
-                key={book.slug}
-                href={`/books/${book.slug}`}
-                className={`text-xs transition-colors duration-150 ${
-                  currentSlug === book.slug
-                    ? "text-accent font-medium"
-                    : "text-muted hover:text-foreground"
-                }`}
+                key={col.id}
+                href={`/#collection-${col.id}`}
+                className="text-xs text-muted hover:text-foreground transition-colors duration-150"
               >
-                {book.title}
+                Collection {col.id} — {col.name}
               </Link>
             ))}
           </div>
         )}
-        <Link
-          href="/"
-          className="text-xs text-muted hover:text-foreground transition-colors duration-150"
-        >
-          All books →
-        </Link>
       </div>
     </nav>
   );

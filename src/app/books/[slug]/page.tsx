@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import type { Metadata } from "next";
-import { getAllBooks, getBookBySlug } from "@/lib/books";
+import { getAllBooks, getBookBySlug, getCollections } from "@/lib/books";
 import Nav from "@/components/Nav";
 import FrameworkCallout from "@/components/FrameworkCallout";
 import PullQuote from "@/components/PullQuote";
@@ -51,11 +51,12 @@ export default async function BookPage({ params }: PageProps) {
   }
 
   const books = getAllBooks();
+  const collections = getCollections(books);
   const accent = meta!.accent || "#8B7355";
 
   return (
     <>
-      <Nav books={books} currentSlug={slug} />
+      <Nav collections={collections} />
       <main className="mx-auto max-w-[68ch] px-6 py-16">
         {/* Book Header */}
         <header className="mb-16 pb-12 border-b border-border">
