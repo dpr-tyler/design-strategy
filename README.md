@@ -1,38 +1,44 @@
-https://design-strategy.vercel.app/
+# Product Strategy Reference
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A curated library of 30 books across three collections — frameworks and mental models for product strategy, behavioral economics, and human behavior, distilled for quick reference.
+
+**Live:** [design-strategy.vercel.app](https://design-strategy.vercel.app/)
+
+## Collections
+
+1. **Product Strategy** — Lean Startup, Shape Up, Inspired, Crossing the Chasm, and more
+2. **Behavioral Economics & Strategy** — Thinking, Fast and Slow, Nudge, Predictably Irrational, and more
+3. **Psychology & Human Behavior** — Atomic Habits, Drive, Mindset, and more
+
+Each book page includes thesis, core frameworks, mental models, and key principles — designed for quick lookup, not summaries.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router)
+- React 19
+- [Tailwind CSS](https://tailwindcss.com) 4
+- [MDX](https://mdxjs.com) via `next-mdx-remote` and `gray-matter`
+
+## Project Structure
+
+```
+content/books/     # MDX files (one per book)
+src/
+  app/             # Next.js App Router pages
+  components/      # BookCard, Nav, FrameworkCallout, PullQuote, SectionLabel
+  lib/             # books.ts (content loading), types.ts
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding a Book
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create `content/books/<slug>.mdx` with frontmatter: `title`, `author`, `year`, `thesis`, `collection` (1–3), optional `accent`
+2. Use `<SectionLabel>`, `<FrameworkCallout>`, and `<PullQuote>` components in the MDX body

@@ -5,7 +5,10 @@
       "Bash(gh auth:*)",
       "Bash(vercel:*)",
       "Bash(for file:*)",
-      "Read(//Users/tyler/design-strategy/**)"
+      "Read(//Users/tyler/design-strategy/**)",
+      "Bash(grep -E \"^\\(title:|author:|year:|collection:\\)\" /Users/tyler/design-strategy/content/books/*.mdx | awk '\n/title:/ { \n  file = $0; sub\\(/:.+/, \"\", file\\); \n  title = $0; sub\\(/^[^:]*: /, \"\", title\\); sub\\(/^\"/, \"\", title\\); sub\\(/\"$/, \"\", title\\);\n  printf \"%s|%s\", file, title;\n}\n/author:/ { \n  author = $0; sub\\(/^[^:]*: /, \"\", author\\); sub\\(/^\"/, \"\", author\\); sub\\(/\"$/, \"\", author\\);\n  printf \"|%s\", author;\n}\n/year:/ { \n  year = $0; sub\\(/^[^:]*: /, \"\", year\\);\n  printf \"|%s\", year;\n}\n/collection:/ { \n  collection = $0; sub\\(/^[^:]*: /, \"\", collection\\);\n  printf \"|%s\\\\n\", collection;\n}\n' | sort -t'|' -k5,5n -k2,2)",
+      "Bash(for f:*)",
+      "Bash(sort -t, -k4,4n -k1,1)"
     ]
   }
 }
