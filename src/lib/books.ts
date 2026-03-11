@@ -33,6 +33,9 @@ export const COLLECTION_NAMES: Record<number, string> = {
   1: "Product Strategy",
   2: "Behavioral Economics & Strategy",
   3: "Psychology & Human Behavior",
+  4: "Systems Thinking & Decision-Making",
+  5: "Growth, Scaling & Business Models",
+  6: "Leadership & Organizational Culture",
 };
 
 export function getCollections(books: BookMeta[]) {
